@@ -11,6 +11,7 @@ const Result = props => {
     pressure,
     wind,
     city,
+    icon,
     description
   } = props.weather;
 
@@ -30,10 +31,7 @@ const Result = props => {
         <hr />
         <h4>
           Opis pogody:
-          <img
-            src={`http://openweathermap.org/img/wn/${description}.png`}
-            alt="aaa"
-          />
+          <img src={`http://openweathermap.org/img/wn/${icon}.png`} alt="aaa" />
         </h4>
         <hr />
         <h4>Dane dla dnia i godziny: {date}</h4>

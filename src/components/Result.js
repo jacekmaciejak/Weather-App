@@ -1,4 +1,5 @@
 import React from "react";
+import "./Result.css";
 
 const Result = props => {
   const {
@@ -21,8 +22,9 @@ const Result = props => {
     content = (
       <div>
         <h3>
-          Wyniki wyszukiwanie dla <em>{city}</em>
+          Wyniki wyszukiwanie dla : <em>{city}</em>
         </h3>
+        <br />
         <h4>Dane dla dnia i godziny: {date}</h4>
         <h4>Aktualna temperatura: {temp} &#176;C</h4>
         <h4>Wschód słońca o: {sunriseTime}</h4>

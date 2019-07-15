@@ -10,7 +10,8 @@ const Result = props => {
     temp,
     pressure,
     wind,
-    city
+    city,
+    description
   } = props.weather;
 
   let content = null;
@@ -25,12 +26,28 @@ const Result = props => {
           Wyniki wyszukiwanie dla : <em>{city}</em>
         </h3>
         <br />
+        <h4>Opis pogody: {description}</h4>
+        <hr />
+        <h4>
+          Opis pogody:
+          <img
+            src={`http://openweathermap.org/img/wn/${description}.png`}
+            alt="aaa"
+          />
+        </h4>
+        <hr />
         <h4>Dane dla dnia i godziny: {date}</h4>
+        <hr />
         <h4>Aktualna temperatura: {temp} &#176;C</h4>
+        <hr />
         <h4>Wschód słońca o: {sunriseTime}</h4>
+        <hr />
         <h4>Zachód słońca o: {sunsetTime}</h4>
+        <hr />
         <h4>Aktualna siła wiatru: {wind} m/s</h4>
+        <hr />
         <h4>Aktualne ciśnienie: {pressure} hPa</h4>
+        <hr />
       </div>
     );
   }

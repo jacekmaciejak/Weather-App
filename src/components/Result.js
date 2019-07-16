@@ -34,26 +34,26 @@ const Result = props => {
         </h1>
         <br />
         <h4>
-          Opis pogody:{" "}
+          Weather description:
           <span style={{ textTransform: "uppercase" }}>{description}</span>
         </h4>
         <h4>
-          Dane dla dnia i godziny: <span>{date}</span>
+          Date and time: <span>{date}</span>
         </h4>
         <h4>
-          Aktualna temperatura: <span>{temp} &#176;C</span>
+          Current temperature: <span>{temp} &#176;C</span>
         </h4>
         <h4>
-          Wschód słońca o: <span>{sunriseTime}</span>
+          Sunrise time: <span>{sunriseTime}</span>
         </h4>
         <h4>
-          Zachód słońca o: <span>{sunsetTime}</span>
+          Sunset time: <span>{sunsetTime}</span>
         </h4>
         <h4>
-          Aktualna siła wiatru: <span>{wind} m/s</span>
+          Wind speed: <span>{wind} m/s</span>
         </h4>
         <h4>
-          Aktualne ciśnienie: <span>{pressure} hPa</span>
+          Current pressure: <span>{pressure} hPa</span>
         </h4>
       </div>
     );

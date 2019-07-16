@@ -61,7 +61,7 @@ const Result = props => {
 
   return (
     <div className="result">
-      {err ? `Nie mamy w bazie :  "${city}"` : content}
+      {err ? `There is no city entered in the database:  "${city}"` : content}
     </div>
   );
 };

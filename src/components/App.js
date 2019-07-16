@@ -27,43 +27,6 @@ class App extends Component {
     });
   };
 
-  // handleCitySubmit = e => {
-  //   e.preventDefault();
-
-  //   const API = ` http://api.openweathermap.org/data/2.5/weather?q=${
-  //     this.state.value
-  //   }&APPID=${APIKey}&units=metric `;
-
-  //   fetch(API)
-  //     .then(response => {
-  //       if (response.ok) {
-  //         return response;
-  //       }
-  //       throw Error("Nie udalo sie");
-  //     })
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       const time = new Date().toLocaleString();
-  //       this.setState(state => ({
-  //         err: false,
-  //         date: time,
-  //         sunrise: data.sys.sunrise,
-  //         sunset: data.sys.sunset,
-  //         temp: data.main.temp,
-  //         pressure: data.main.pressure,
-  //         wind: data.wind.speed,
-  //         city: state.value
-  //       }));
-  //     })
-  //     .catch(err => {
-  //       console.log(err);
-  //       this.setState(state => ({
-  //         err: true,
-  //         city: state.value
-  //       }));
-  //     });
-  // };
-
   componentDidUpdate(prevProps, prevState) {
     if (this.state.value.length === 0) return;
 
@@ -108,6 +71,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <img
+          className="App_back"
+          src=" https://www.thoughtco.com/thmb/O0XQ_P1r29akR9gudPjVZj8OpPM=/2123x1416/filters:no_upscale():max_bytes(150000):strip_icc()/548306131-56a9e2a33df78cf772ab3983.jpg"
+          alt="Background"
+        />
         <Form value={this.state.value} change={this.handleInputChange} />
         <Result weather={this.state} />
       </div>

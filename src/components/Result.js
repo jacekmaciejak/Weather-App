@@ -22,30 +22,39 @@ const Result = props => {
     const sunsetTime = new Date(sunset * 1000).toLocaleTimeString();
 
     content = (
-      <div>
-        <h3>
-          Wyniki wyszukiwanie dla : <em>{city}</em>
-        </h3>
+      <div className="result_text">
+        <div className="icon">
+          <img
+            src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
+            alt="aaa"
+          />
+        </div>
+        <h1 style={{ textAlign: "center", textTransform: "capitalize" }}>
+          <em>{city}</em>
+        </h1>
         <br />
-        <h4>Opis pogody: {description}</h4>
-        <hr />
         <h4>
-          Opis pogody:
-          <img src={`http://openweathermap.org/img/wn/${icon}.png`} alt="aaa" />
+          Opis pogody:{" "}
+          <span style={{ textTransform: "uppercase" }}>{description}</span>
         </h4>
-        <hr />
-        <h4>Dane dla dnia i godziny: {date}</h4>
-        <hr />
-        <h4>Aktualna temperatura: {temp} &#176;C</h4>
-        <hr />
-        <h4>Wschód słońca o: {sunriseTime}</h4>
-        <hr />
-        <h4>Zachód słońca o: {sunsetTime}</h4>
-        <hr />
-        <h4>Aktualna siła wiatru: {wind} m/s</h4>
-        <hr />
-        <h4>Aktualne ciśnienie: {pressure} hPa</h4>
-        <hr />
+        <h4>
+          Dane dla dnia i godziny: <span>{date}</span>
+        </h4>
+        <h4>
+          Aktualna temperatura: <span>{temp} &#176;C</span>
+        </h4>
+        <h4>
+          Wschód słońca o: <span>{sunriseTime}</span>
+        </h4>
+        <h4>
+          Zachód słońca o: <span>{sunsetTime}</span>
+        </h4>
+        <h4>
+          Aktualna siła wiatru: <span>{wind} m/s</span>
+        </h4>
+        <h4>
+          Aktualne ciśnienie: <span>{pressure} hPa</span>
+        </h4>
       </div>
     );
   }

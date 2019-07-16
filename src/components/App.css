@@ -1,11 +1,12 @@
 .App {
-    border: 3px solid #ccc;
+    border: 3px solid lightblue;
     width: 50%;
+    height: 100%;
     margin: 0 auto;
-    margin-top: 5%;
-    font-size: 20px;
+    font-size: 22px;
     padding: 50px;
-    background-color: lightgrey
+    position: relative;
+    border-radius: 10px;
 }
 
 .App input {
@@ -15,5 +16,17 @@
     background-color: #fff;
     transition: .3s;
     font-size: 20px;
+    border-radius: 10px;
+}
 
+.App_back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    z-index: -1;
+    background-repeat: no-repeat;
+    object-fit: cover;
 }
